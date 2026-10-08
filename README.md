@@ -1,11 +1,11 @@
 # Nattur — Case de UX: App de Gestão Condominial
 ### Perfil Morador · Design Thinking aplicado com Duplo Diamante
 
-**[Protótipo navegável](https://idyllic-cendol-215ca6.netlify.app)** · **[Case completo no portfólio](https://rafajuri.notion.site/Nattur-Produto-para-condom-nio-3bee907dac61801ea04ed3f24a6aed1d)**
+**[Protótipo navegável](https://nattur.netlify.app)** · **[Case completo no portfólio](https://rafajuri.notion.site/Nattur-Produto-para-condom-nio-3bee907dac61801ea04ed3f24a6aed1d)**
 
 ## Protótipo
 
-- **Online:** https://idyllic-cendol-215ca6.netlify.app
+- **Online:** https://nattur.netlify.app
 - **Local:** abra `prototype/index.html` no navegador. Precisa de internet para carregar fontes e ícones do Google.
 - **Perfis:** ao abrir, o protótipo mostra uma seleção de perfil em modo demonstração. Morador e Síndico têm jornada de cadastro pronta, e Zelador e Prestador aparecem como "em breve". Para abrir direto um perfil, acrescente `?perfil=morador` ou `?perfil=sindico` ao endereço.
 - Os dados são fictícios. O que você digita fica só na memória do navegador e não é enviado a nenhum servidor.
