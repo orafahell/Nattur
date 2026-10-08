@@ -1,0 +1,9 @@
+# Publica só o protótipo. O README (case study) fica no GitHub e não vai para o site.
+[build]
+  publish = "prototype"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
