@@ -305,6 +305,47 @@
     .drawer-panel{transition:none !important}
   }
   @media (forced-colors:active){ .check.checked{forced-color-adjust:none} }
+
+  /* ============ DÚVIDAS ============ */
+  .faq-search{position:relative;margin-bottom:20px}
+  .faq-search .field-input{margin:0;padding-left:46px;padding-right:48px;border-radius:var(--radius-full)}
+  .faq-search .s-ic{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--gray-green);font-size:1.25rem;pointer-events:none}
+  .faq-clear{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;background:transparent;border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--gray-green)}
+  .faq-clear.show{display:flex}
+  .faq-list{list-style:none;background:#fff;border:1px solid var(--border-soft);border-radius:var(--radius-md);box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}
+  .faq-list li + li{border-top:1px solid #EEEEE8}
+  .faq-row{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;min-height:56px;background:#fff;border:none;text-align:left;font-family:'Inter',sans-serif;color:var(--ink);cursor:pointer}
+  .faq-row:hover{background:var(--white-natural)}
+  .faq-num{width:28px;height:28px;border-radius:50%;background:var(--sage-soft);color:var(--sage-deep);font-weight:700;font-size:0.8125rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .faq-row .t{flex:1;min-width:0}
+  .faq-row .t b{display:block;font-size:0.875rem;font-weight:500;line-height:1.4}
+  .faq-row .t small{display:block;font-size:0.75rem;color:var(--gray-green);margin-top:2px}
+  .faq-row .chev{color:var(--gray-green);font-size:1.125rem}
+  .faq-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:8px}
+  .faq-cat{display:flex;align-items:center;gap:10px;padding:12px;min-height:56px;background:#fff;border:1px solid var(--border-soft);border-radius:var(--radius-md);font-family:'Inter',sans-serif;font-size:0.8125rem;font-weight:600;line-height:1.3;color:var(--ink);text-align:left;cursor:pointer;box-shadow:var(--shadow)}
+  .faq-cat i{color:var(--sage-deep);font-size:1.25rem;flex-shrink:0}
+  .faq-filter{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+  .faq-filter p{font-size:0.8125rem;color:var(--gray-green)}
+  .faq-chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 12px;border:1px solid var(--sage-deep);border-radius:var(--radius-full);background:#fff;color:var(--sage-deep);font-size:0.8125rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
+  .faq-empty{text-align:center;padding:24px 16px;background:#fff;border:1px dashed var(--line-strong);border-radius:var(--radius-md);margin-bottom:20px}
+  .faq-empty i{font-size:2rem;color:var(--sage-deep)}
+  .faq-empty h3{font-size:0.9375rem;margin:8px 0 4px}
+  .faq-empty p{font-size:0.8125rem;color:var(--gray-green);line-height:1.5;margin-bottom:14px}
+  .faq-answer .cat{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:600;color:var(--sage-deep);background:var(--sage-soft);padding:4px 10px;border-radius:var(--radius-full);margin-bottom:12px}
+  .faq-answer .cat i{font-size:0.9375rem}
+  .faq-answer h3{font-family:'Quicksand',sans-serif;font-size:1.1875rem;font-weight:700;line-height:1.35;margin-bottom:12px}
+  .faq-answer .a{font-size:0.9375rem;line-height:1.65;color:var(--ink)}
+  .faq-src{display:flex;gap:10px;align-items:flex-start;background:var(--white-natural);border:1px solid var(--border-soft);border-radius:var(--radius-sm);padding:12px;margin:18px 0;font-size:0.8125rem;line-height:1.45;color:var(--gray-green)}
+  .faq-src i{color:var(--sage-deep);font-size:1.125rem}
+  .faq-src b{color:var(--ink);font-weight:600}
+  .faq-help{background:#fff;border:1px solid var(--border-soft);border-radius:var(--radius-md);padding:14px;margin-bottom:24px}
+  .faq-help p{font-size:0.875rem;font-weight:600;margin-bottom:10px}
+  .faq-help .row{display:flex;gap:10px}
+  .faq-help .row button{flex:1;min-height:44px;border-radius:var(--radius-full);border:1px solid var(--sage-deep);background:#fff;color:var(--sage-deep);font-weight:600;font-size:0.8125rem;cursor:pointer;font-family:'Inter',sans-serif}
+  .faq-help .row button[aria-pressed="true"]{background:var(--sage-deep);color:#fff}
+  .faq-help .more{margin-top:12px;font-size:0.8125rem;color:var(--gray-green);line-height:1.5}
+  .home-faq{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;min-height:56px;margin-bottom:20px;background:#fff;border:1px solid var(--border-soft);border-radius:var(--radius-full);box-shadow:var(--shadow);font-family:'Inter',sans-serif;font-size:0.875rem;color:var(--gray-green);text-align:left;cursor:pointer}
+  .home-faq i{color:var(--sage-deep)}
 </style>
 </head>
 <body>
@@ -434,6 +475,8 @@
         <div class="ic"><i class="material-symbols-outlined">package_2</i></div>
         <div><p>Você tem 1 encomenda aguardando retirada</p><span>Código de retirada disponível</span></div>
       </div>
+
+      <button class="home-faq" type="button" onclick="goToDuvidas()"><i class="material-symbols-outlined" aria-hidden="true">search</i><span>Tem uma dúvida? Busque nas regras do condomínio</span></button>
 
       <div class="section-title"><h2>Fatura de novembro</h2><a onclick="goToPagamentos()">Ver detalhamento</a></div>
       <div class="card" onclick="goToPagamentos()" style="cursor:pointer">
@@ -770,6 +813,40 @@
   </div>
 
   <!-- ============ menu inferior ============ -->
+
+  <!-- ============ SCREEN: DÚVIDAS ============ -->
+  <div class="screen" id="screen-duvidas">
+    <div class="subheader">
+      <button class="back-btn" onclick="goHome()" aria-label="Voltar"><i class="material-symbols-outlined">arrow_back</i></button>
+      <div><h2>Dúvidas</h2><p class="sub">Respostas do regulamento do condomínio</p></div>
+    </div>
+    <div class="content">
+      <div class="faq-search" role="search">
+        <label for="faqSearch" class="sr-only">Buscar uma dúvida</label>
+        <i class="material-symbols-outlined s-ic">search</i>
+        <input class="field-input" id="faqSearch" type="search" placeholder="Ex.: horário de obra, mudança, pet" autocomplete="off" oninput="renderFaq()" onkeydown="if(event.key==='Escape'){clearFaqSearch()}">
+        <button class="faq-clear" id="faqClear" type="button" onclick="clearFaqSearch()" aria-label="Limpar busca"><i class="material-symbols-outlined">close</i></button>
+      </div>
+      <p class="sr-only" id="faqStatus" role="status" aria-live="polite"></p>
+      <div id="faqResults"></div>
+      <div id="faqHome">
+        <div class="section-title"><h2>Mais perguntadas</h2></div>
+        <ol class="faq-list" id="faqTop"></ol>
+        <div class="section-title"><h2>Por assunto</h2></div>
+        <div class="faq-cats" id="faqCats"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCREEN: DÚVIDA — resposta ============ -->
+  <div class="screen" id="screen-duvida">
+    <div class="subheader">
+      <button class="back-btn" onclick="backToFaq()" aria-label="Voltar"><i class="material-symbols-outlined">arrow_back</i></button>
+      <div><h2>Resposta</h2></div>
+    </div>
+    <div class="content faq-answer" id="faqAnswer"></div>
+  </div>
+
   <nav class="bottom-nav" id="globalNav" style="display:none" aria-label="Navegação principal">
     <div class="nav-item" id="navEncomendas" onclick="goToEncomendas()"><span class="nav-indicator"><i class="material-symbols-outlined">inventory_2</i></span><span>Encomendas</span></div>
     <div class="nav-item" id="navReservas" onclick="goToReservas()"><span class="nav-indicator"><i class="material-symbols-outlined">event</i></span><span>Reservas</span></div>
@@ -785,6 +862,7 @@
     <div class="drawer-item" onclick="toggleDrawer();goToCadastros()"><div class="ic"><i class="material-symbols-outlined">person_add</i></div><span>Cadastros</span><i class="material-symbols-outlined">chevron_right</i></div>
     <div class="drawer-item"><div class="ic"><i class="material-symbols-outlined">chat_bubble</i></div><span>Contato</span><i class="material-symbols-outlined">chevron_right</i></div>
     <p class="drawer-label">Do condomínio</p>
+    <div class="drawer-item" onclick="toggleDrawer();goToDuvidas()"><div class="ic"><i class="material-symbols-outlined">help</i></div><span>Dúvidas</span><i class="material-symbols-outlined">chevron_right</i></div>
     <div class="drawer-item"><div class="ic"><i class="material-symbols-outlined">payments</i></div><span>Balancete</span><i class="material-symbols-outlined">chevron_right</i></div>
     <div class="drawer-item"><div class="ic"><i class="material-symbols-outlined">groups</i></div><span>Assembleia</span><i class="material-symbols-outlined">chevron_right</i></div>
   </div>
@@ -2242,6 +2320,181 @@ document.addEventListener('click', function(e){
 });
 
 
+const FAQ_SOURCE = 'Regulamento Interno do Nattur Nova Klabin (26/08/2024)';
+const FAQ_CATEGORIES = [
+  {key:'obras', label:'Obras e mudanças', icon:'construction'},
+  {key:'areas', label:'Áreas comuns e reservas', icon:'celebration'},
+  {key:'portaria', label:'Portaria e encomendas', icon:'inventory_2'},
+  {key:'convivencia', label:'Convivência e regras', icon:'gavel'},
+  {key:'pets', label:'Pets', icon:'pets'},
+  {key:'financeiro', label:'Taxas e pagamentos', icon:'payments'},
+];
+/* rank = posição no top 10 (null = fora do top). Ordem provisória, a revisar com a frequência das conversas. */
+const FAQ = [
+  {id:'obra-horario', rank:1, cat:'obras', q:'Qual o horário permitido para obras e barulho de furadeira?',
+   a:'Segunda a sexta, das 8h às 17h. Sábado, das 9h às 12h, com autorização prévia da administração. Domingos e feriados é proibido. Reparos de emergência, como vazamento de água ou gás, podem ser feitos a qualquer hora com aviso ao zelador ou ao síndico.',
+   src:'Cap. IV, art. 12; Cap. III, art. 7', kw:'reforma furadeira martelete barulho obra pedreiro horario sabado domingo feriado emergencia vazamento'},
+  {id:'mudanca', rank:2, cat:'obras', q:'Como agendar uma mudança?',
+   a:'Agende data e horário no app da administradora. Mudanças podem ser feitas de segunda a sexta, das 8h às 17h, e sábado, das 8h às 12h; nunca aos domingos e feriados. Use só o elevador de serviço, com as mantas de proteção, sem bloquear as entradas. Danos ao prédio são cobrados da unidade.',
+   src:'Cap. VI, arts. 1 a 4', kw:'mudanca mudar caminhao agendar elevador servico manta moveis carreto'},
+  {id:'encomendas', rank:3, cat:'portaria', q:'A portaria recebe minhas encomendas?',
+   a:'Sim, encomendas pequenas (até o tamanho de uma caixa de micro-ondas). Você recebe o aviso pelo app e retira com o código. Volumes grandes precisam ser recebidos por você, com entrega agendada. A portaria não recebe alimentos nem pacotes violados ou sem identificação, e entregadores não entram no condomínio.',
+   src:'Cap. II, art. 7', kw:'encomenda pacote entrega correio ifood comida delivery mercado livre amazon portaria retirar codigo'},
+  {id:'reserva-salao', rank:4, cat:'areas', q:'Como reservar o salão de festas e quanto custa?',
+   a:'Pelo app, com pelo menos 48h e no máximo 3 meses de antecedência, uma reserva por vez e só por maiores de 18 anos. Capacidade de 50 pessoas. A taxa é 45% da menor cota condominial e vem na fatura seguinte. Cancelando até 48h antes, o valor vira crédito.',
+   src:'Cap. XI, arts. 1, 3 e 4', kw:'salao festa reserva aniversario taxa valor preco cancelar evento som musica convidados capacidade'},
+  {id:'reserva-churrasqueira', rank:5, cat:'areas', q:'Como funciona a reserva da churrasqueira e do espaço gourmet?',
+   a:'Mesma regra de antecedência: mínimo 48h e máximo 90 dias, pelo app, para morador adimplente maior de 18 anos. Churrasqueira para até 30 pessoas, espaço gourmet para até 50. Taxa de 40% da menor cota, na fatura seguinte. Som só até as 22h e sem música ao vivo. Deixe a lista de convidados na portaria.',
+   src:'Cap. XVII e XVIII', kw:'churrasqueira churrasco gourmet reserva taxa convidados som musica'},
+  {id:'silencio', rank:6, cat:'convivencia', q:'Qual é o horário de silêncio?',
+   a:'Das 22h às 7h de segunda a sexta, e das 22h às 8h nos fins de semana e feriados. Fora desse horário o volume também não pode incomodar outras unidades.',
+   src:'Cap. I, art. 6; Cap. III, art. 14', kw:'silencio barulho som vizinho festa musica noite horario lei'},
+  {id:'visitantes', rank:7, cat:'portaria', q:'Como liberar a entrada de visitante ou prestador de serviço?',
+   a:'Cadastre antes no app (Cadastros), informando nome, documento e período. Sem autorização a portaria não libera. Corretores só entram com autorização escrita do proprietário, de segunda a sexta das 8h às 17h e sábado das 9h às 12h.',
+   src:'Cap. II, arts. 2, 3 e 5; Cap. IV, art. 14', kw:'visita visitante prestador diarista faxineira tecnico liberar entrada portaria cadastro corretor'},
+  {id:'reforma-aprovacao', rank:8, cat:'obras', q:'Preciso de autorização para fazer reforma no apartamento?',
+   a:'Sim. Comunique o síndico por escrito antes de começar. Se mexer em paredes, pisos mais pesados ou instalações, envie projeto e ART/RRT de engenheiro ou arquiteto (NBR 16280). O síndico responde em até 5 dias úteis. Prumadas e estrutura não podem ser alteradas. Inquilino pede pelo proprietário.',
+   src:'Cap. IV, arts. 2 a 11', kw:'reforma obra autorizacao art rrt engenheiro arquiteto parede projeto nbr 16280'},
+  {id:'pets', rank:9, cat:'pets', q:'Quais as regras para pets?',
+   a:'Pets de qualquer porte são permitidos. Circulam pelo elevador de serviço, com coleira, e raças consideradas bravas usam focinheira. O pet place funciona 24h; recolha os dejetos. Barulho ou sujeira contínuos geram notificação, e o síndico pode pedir a carteira de vacinação.',
+   src:'Cap. V; Cap. XX; Cap. VIII, art. 3', kw:'pet cachorro gato animal elevador focinheira pet place latido coco vacina'},
+  {id:'multa', rank:10, cat:'convivencia', q:'Como funciona multa e como recorrer?',
+   a:'Em geral há advertência antes. A multa vai de 1 a 5 vezes a cota mensal da unidade, conforme a gravidade, e chega por escrito. Você pode recorrer por escrito ao corpo diretivo em até 30 dias; se mantida, pode levar à próxima assembleia.',
+   src:'Cap. XXV, arts. 1 a 3', kw:'multa advertencia notificacao recurso recorrer infração penalidade'},
+  {id:'piscina', rank:null, cat:'areas', q:'Quais os horários e regras da piscina?',
+   a:'Todos os dias, das 8h às 22h, com pausas para manutenção. Até 2 visitantes por apartamento. Crianças sempre acompanhadas. Nada de vidro, comida dentro da água ou som sem fone. Ducha antes de entrar.',
+   src:'Cap. XXIV', kw:'piscina horario visitante crianca vidro'},
+  {id:'academia', rank:null, cat:'areas', q:'Posso levar visitante ou personal na academia?',
+   a:'Visitantes não. Personal trainer sim, desde que você esteja junto. A academia funciona das 5h às 23h. Menores de 16 anos só com atestado médico e acompanhados.',
+   src:'Cap. XXI', kw:'academia fitness personal visitante horario'},
+  {id:'temporada', rank:null, cat:'convivencia', q:'Posso alugar meu apartamento por temporada (Airbnb)?',
+   a:'Não. O uso é estritamente residencial e a locação de curta temporada é proibida.',
+   src:'Cap. III, art. 1', kw:'airbnb temporada aluguel curto locacao booking'},
+  {id:'inquilino-lazer', rank:null, cat:'convivencia', q:'Se eu alugar meu apartamento, ainda posso usar o lazer?',
+   a:'Não. O proprietário de unidade alugada não usa as áreas de lazer enquanto o imóvel estiver locado. O inquilino usa e responde junto com o proprietário pelas regras e multas.',
+   src:'Disposições finais, arts. 1, 3 e 6', kw:'inquilino proprietario aluguel lazer locatario'},
+  {id:'elevador-social', rank:null, cat:'convivencia', q:'O que não pode ir no elevador social?',
+   a:'Animais, compras em carrinho, bicicletas, mudanças, lixo e volumes grandes vão pelo elevador de serviço. O social é só para pessoas.',
+   src:'Cap. VII, art. 5; Cap. VIII, arts. 3 e 6', kw:'elevador social servico bicicleta carrinho compras lixo'},
+  {id:'fachada', rank:null, cat:'obras', q:'Posso colocar película (insulfilm) ou mudar a varanda?',
+   a:'Não pode alterar a fachada nem usar película ou papel nos vidros. Mudanças na fachada seguem o padrão aprovado pelo condomínio.',
+   src:'Cap. III, art. 2; Cap. IV, art. 15', kw:'insulfilm pelicula fachada varanda envidracamento cortina vidro'},
+  {id:'reclamacao', rank:null, cat:'convivencia', q:'Como registrar uma reclamação ou sugestão?',
+   a:'Pelo app, por e-mail à administração ou no livro de ocorrências da portaria. Registre você mesmo, com data e descrição.',
+   src:'Cap. II, art. 8', kw:'reclamacao ocorrencia sugestao reclamar vizinho problema registrar'},
+  {id:'datas-festivas', rank:null, cat:'areas', q:'Como reservar o salão no Natal ou Réveillon?',
+   a:'Nos dias 24, 25 e 31/12 e 1/1 não há reserva pelo app: a administração faz um sorteio entre as unidades interessadas.',
+   src:'Cap. XI, art. 11; Cap. XVII, art. 9', kw:'natal reveillon ano novo sorteio reserva'},
+  {id:'criancas', rank:null, cat:'areas', q:'Até que idade a brinquedoteca e o playground podem ser usados?',
+   a:'Brinquedoteca: crianças de até 8 anos, das 8h às 22h, com até 2 convidados acompanhados. Playground: até 10 anos, das 8h às 22h, sem jogos com bola.',
+   src:'Cap. XXII; Cap. XXIII', kw:'brinquedoteca playground crianca idade horario'},
+  {id:'coworking', rank:null, cat:'areas', q:'Posso levar convidado ao coworking?',
+   a:'Não. O coworking é exclusivo de moradores em dia com o condomínio.',
+   src:'Cap. XIX', kw:'coworking trabalho convidado'},
+  {id:'segunda-via', rank:null, cat:'financeiro', q:'Onde vejo minha fatura e o boleto?',
+   a:'Em Pagamentos você vê o total do mês, o detalhamento de cada item e pode baixar o boleto e o extrato. Taxas de reserva entram na fatura seguinte ao uso.',
+   src:'App Nattur', kw:'boleto segunda via fatura pagamento taxa condominio vencimento pix', action:{label:'Abrir Pagamentos', fn:'goToPagamentos'}},
+  {id:'lixo', rank:null, cat:'convivencia', q:'Como descartar o lixo e o entulho?',
+   a:'Lixo doméstico em sacos fechados nas lixeiras de orgânico e reciclável. Entulho de obra vai ensacado, pelo elevador de serviço, direto para caçamba contratada por você.',
+   src:'Cap. VII, art. 4; Cap. III, art. 8', kw:'lixo reciclavel entulho cacamba descarte'},
+];
+
+let faqCategory = null;
+let faqReturnTo = 'screen-duvidas';
+const FAQ_STOP = new Set(['de','da','do','das','dos','o','a','os','as','e','para','pra','como','posso','pode','qual','quais','que','no','na','nos','nas','em','um','uma','meu','minha','eu','se','ao','com','por','tem','ter','sobre','fazer','faz','preciso','quero','saber','é']);
+const FAQ_SYN = {festa:['salao','churrasqueira'],aniversario:['salao'],barulho:['silencio','obra'],ruido:['silencio','obra'],som:['silencio'],cachorro:['pet'],cao:['pet'],gato:['pet'],animal:['pet'],pacote:['encomenda'],entrega:['encomenda'],delivery:['encomenda'],correio:['encomenda'],airbnb:['temporada'],boleto:['fatura'],taxa:['fatura','reserva'],visita:['visitante'],diarista:['prestador'],faxineira:['prestador'],obra:['reforma'],reforma:['obra'],multa:['advertencia'],churrasco:['churrasqueira'],mudar:['mudanca'],piscina:['piscina'],academia:['academia'],lixo:['lixo'],insulfilm:['pelicula']};
+function faqNorm(t){ return String(t).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); }
+function faqTokens(q){ return faqNorm(q).split(/[^a-z0-9]+/).filter(w => w.length >= 2 && !FAQ_STOP.has(w)); }
+function faqSearch(query, cat){
+  const toks = faqTokens(query);
+  const pool = FAQ.filter(f => !cat || f.cat === cat);
+  if(!toks.length) return cat ? pool.slice().sort((a,b) => (a.rank||99)-(b.rank||99)) : [];
+  return pool.map(f => {
+    const qW = faqTokens(f.q), kW = faqNorm(f.kw).split(' '), aW = faqTokens(f.a);
+    let score = 0, hit = 0;
+    toks.forEach(t => {
+      const alts = [t].concat(FAQ_SYN[t] || []);
+      let best = 0;
+      alts.forEach((w, i) => {
+        const pref = x => x === w || (w.length >= 3 && x.startsWith(w));
+        const k = i === 0 ? 1 : 0.7;
+        if(qW.some(pref)) best = Math.max(best, 3*k);
+        else if(kW.some(pref)) best = Math.max(best, 2*k);
+        else if(aW.some(pref)) best = Math.max(best, 1*k);
+      });
+      if(best) hit++;
+      score += best;
+    });
+    return {f, score, cover: hit / toks.length};
+  }).filter(r => r.score > 0 && r.cover >= 0.5)
+    .filter((r, _, all) => r.score >= Math.max(...all.map(x => x.score)) * 0.5)
+    .sort((a,b) => b.cover - a.cover || b.score - a.score || (a.f.rank||99) - (b.f.rank||99))
+    .map(r => r.f);
+}
+function faqCatLabel(k){ const c = FAQ_CATEGORIES.find(c => c.key === k); return c ? c.label : ''; }
+function faqRow(f, n, hideCat){
+  return `<li><button class="faq-row" type="button" onclick="openFaq('${f.id}')">${n ? `<span class="faq-num" aria-hidden="true">${n}</span>` : ''}<span class="t"><b>${f.q}</b>${n || hideCat ? '' : `<small>${faqCatLabel(f.cat)}</small>`}</span><i class="material-symbols-outlined chev" aria-hidden="true">chevron_right</i></button></li>`;
+}
+function goToDuvidas(){
+  document.getElementById('globalNav').style.display = 'flex';
+  faqCategory = null;
+  const inp = document.getElementById('faqSearch'); inp.value = '';
+  const top = FAQ.filter(f => f.rank).sort((a,b) => a.rank - b.rank).slice(0,10);
+  document.getElementById('faqTop').innerHTML = top.map((f,i) => faqRow(f, i+1)).join('');
+  document.getElementById('faqCats').innerHTML = FAQ_CATEGORIES.map(c => `<button class="faq-cat" type="button" onclick="filterFaq('${c.key}')"><i class="material-symbols-outlined" aria-hidden="true">${c.icon}</i><span>${c.label}</span></button>`).join('');
+  renderFaq();
+  showScreen('screen-duvidas');
+}
+function filterFaq(cat){ faqCategory = cat; renderFaq(); const r = document.getElementById('faqResults'); const h = r.querySelector('p'); if(h){ h.setAttribute('tabindex','-1'); h.focus(); } }
+function clearFaqSearch(){ const i = document.getElementById('faqSearch'); i.value = ''; faqCategory = null; renderFaq(); i.focus(); }
+function renderFaq(){
+  const q = document.getElementById('faqSearch').value.trim();
+  document.getElementById('faqClear').classList.toggle('show', !!q);
+  const res = document.getElementById('faqResults'), home = document.getElementById('faqHome'), st = document.getElementById('faqStatus');
+  if(!q && !faqCategory){ res.innerHTML = ''; home.style.display = ''; st.textContent = ''; return; }
+  home.style.display = 'none';
+  const list = faqSearch(q, faqCategory);
+  const filt = faqCategory ? `<button class="faq-chip" type="button" onclick="faqCategory=null;renderFaq()" aria-label="Remover filtro ${faqCatLabel(faqCategory)}">${faqCatLabel(faqCategory)} <i class="material-symbols-outlined" aria-hidden="true" style="font-size:1rem">close</i></button>` : '';
+  const count = list.length === 1 ? '1 resposta' : list.length + ' respostas';
+  if(!list.length){
+    res.innerHTML = `<div class="faq-filter"><p>Nenhuma resposta</p>${filt}</div><div class="faq-empty"><i class="material-symbols-outlined" aria-hidden="true">contact_support</i><h3>Não encontramos essa dúvida</h3><p>Tente outras palavras, como "obra", "mudança" ou "salão". Se preferir, envie a pergunta para a administração.</p><button class="btn-outline" type="button" style="margin:0" onclick="askAdmin()">Enviar pergunta à administração</button></div>`;
+    st.textContent = 'Nenhuma resposta encontrada.';
+    return;
+  }
+  res.innerHTML = `<div class="faq-filter"><p>${count}${q ? ' para "' + q.replace(/[<>&"]/g,'') + '"' : ''}</p>${filt}</div><ul class="faq-list">${list.map(f => faqRow(f, null, !!faqCategory)).join('')}</ul>`;
+  st.textContent = count + ' encontrada' + (list.length === 1 ? '.' : 's.');
+}
+function openFaq(id){
+  const f = FAQ.find(x => x.id === id); if(!f) return;
+  const cat = FAQ_CATEGORIES.find(c => c.key === f.cat);
+  const related = FAQ.filter(x => x.cat === f.cat && x.id !== f.id).slice(0,3);
+  document.getElementById('faqAnswer').innerHTML = `
+    <span class="cat"><i class="material-symbols-outlined" aria-hidden="true">${cat.icon}</i>${cat.label}</span>
+    <h3>${f.q}</h3>
+    <p class="a">${f.a}</p>
+    ${f.action ? `<button class="btn-primary" type="button" style="margin-top:16px" onclick="${f.action.fn}()">${f.action.label}</button>` : ''}
+    <div class="faq-src"><i class="material-symbols-outlined" aria-hidden="true">menu_book</i><span><b>Fonte:</b> ${f.src === 'App Nattur' ? 'App Nattur' : FAQ_SOURCE + ', ' + f.src}</span></div>
+    <div class="faq-help" role="group" aria-labelledby="faqHelpQ">
+      <p id="faqHelpQ">Isso respondeu sua dúvida?</p>
+      <div class="row"><button type="button" aria-pressed="false" onclick="faqFeedback(this,true)">Sim</button><button type="button" aria-pressed="false" onclick="faqFeedback(this,false)">Não</button></div>
+      <div class="more" id="faqMore" aria-live="polite"></div>
+    </div>
+    ${related.length ? `<div class="section-title"><h2>Relacionadas</h2></div><ul class="faq-list">${related.map(x => faqRow(x)).join('')}</ul>` : ''}`;
+  showScreen('screen-duvida');
+  document.getElementById('faqAnswer').scrollTop = 0;
+}
+function faqFeedback(btn, ok){
+  btn.parentElement.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+  document.getElementById('faqMore').innerHTML = ok
+    ? 'Obrigado! Isso nos ajuda a manter as respostas em dia.'
+    : 'Sentimos muito. <button class="btn-outline" type="button" style="margin:10px 0 0" onclick="askAdmin()">Enviar pergunta à administração</button>';
+}
+function askAdmin(){ showToast('Pergunta enviada à administração'); }
+function backToFaq(){
+  showScreen('screen-duvidas');
+  const q = document.getElementById('faqSearch'); if(q.value || faqCategory) renderFaq();
+}
+
 /* ================= Camada de acessibilidade (WCAG 2.2 AA) ================= */
 (function(){
   const phone = document.querySelector('.phone');
@@ -2251,7 +2504,7 @@ document.addEventListener('click', function(e){
     'screen-home':'navInicio','screen-reservas':'navReservas','screen-date':'navReservas','screen-calendar':'navReservas','screen-form':'navReservas','screen-date-summary':'navReservas',
     'screen-encomendas':'navEncomendas','screen-package-detail':'navEncomendas',
     'screen-pagamentos':'navPagamentos','screen-historico':'navPagamentos','screen-fatura-detalhe':'navPagamentos',
-    'screen-cadastros':'navMais','screen-cadastro-lista':'navMais','screen-cadastro-form':'navMais','screen-prestador-wizard':'navMais','screen-bulk-wizard':'navMais','screen-bulk-link':'navMais'
+    'screen-duvidas':'navMais','screen-duvida':'navMais','screen-cadastros':'navMais','screen-cadastro-lista':'navMais','screen-cadastro-form':'navMais','screen-prestador-wizard':'navMais','screen-bulk-wizard':'navMais','screen-bulk-link':'navMais'
   };
   const NAV_IDS = ['navEncomendas','navReservas','navInicio','navPagamentos','navMais'];
 
